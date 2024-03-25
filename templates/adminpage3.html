@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+#total-customers{
+            background-color: rgb(26, 36, 36);
+        }
+
+        #total-sellers{
+            background-color: pink;
+        }
+        /* #total-buyers{
+            background-color: rgb(196, 192, 255);
+        } */
+        #total-products{
+            background-color: rgb(196, 192, 255);
+        }
+         
+        #header {
+            background: linear-gradient(to right, #24434d, #eedde5);
+            padding: 25px;
+            text-align: center;
+        }
+
+        #header h1 {
+            margin: 0;
+            color: #fff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            /* background-image: url('static/images/admin5.jpg'); Replace with the path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        #sidebar {
+            width: 250px;
+            height: 100%;
+            background: linear-gradient(to right, #24434d, #eedde5);
+            /* background: #333; */
+            position: fixed;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 250px;
+            padding: 15px;
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .sidebar-link:hover {
+            background: #555;
+        }
+
+        
+        h1 {
+            color: #333;
+        }
+
+        
+        .card {
+            /* Add this style to give some space between cards */
+            margin-bottom: 20px;
+        }
+
+        /* Your existing styles remain unchanged */
+
+        
+        
+
+        .card {
+            /* Add this style to give some space between cards */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Easy Exchange</h1>
+    </div>
+    <div id="sidebar">
+        <!-- Company Logo -->
+        <img src="{% static 'images/logo.png' %}" alt="Company Logo" class="company-logo">
+        
+        <!-- Company Name -->
+        <h2 style="color: #fff;">Easy Exchange</h2>
+
+        <!-- Sidebar Links -->
+        <a href="#" class="sidebar-link">Dashboard</a>
+        <a href="#" class="sidebar-link">Users</a>
+        <a href="#" class="sidebar-link">Settings</a>
+        <a href="#" class="sidebar-link">Logout</a>
+    </div>
+
+    <div id="sidebar">
+        <!-- Sidebar content remains unchanged -->
+    </div>
+
+    <div id="content">
+        <div class="page-content">
+            <h1 class="text-colour:#1dad3d">Hi {{user.username}},Welcome!</h1>
+            <!-- Add your dashboard content here -->
+
+            
+            
+
+            
+        
+
+            <!-- Bootstrap grid system for cards -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center" id="total-customers">
+                        <div class="card-header">
+                            <h5 class="card-title">Total Customers</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{{ customers }}</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center" id="total-sellers">
+                        <div class="card-header">
+                            <h5 class="card-title">No of Exchanges</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{{ notifications }}</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uncomment the following block if you want to add the third card -->
+                <!--
+                <div class="col-md-4">
+                    <div class="card text-center" id="total-buyers">
+                        <div class="card-header">
+                            <h5 class="card-title">Total Buyers</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{{ buyers }}</h3>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <div class="col-md-4">
+                    <div class="card text-center" id="total-products">
+                        <div class="card-header">
+                            <h5 class="card-title">Total Products</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{{ products }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts (required for some Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

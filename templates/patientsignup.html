@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/signupform.css' %}"/> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+        <title>Patient Signup-ODAS</title>
+             
+    </head>
+    <body >
+        <div class="container">
+            <div class="name">  
+            </div>
+            <div class="content-box">
+                <div class="content-main">
+                    <div class="signup-form">
+                        <h1>Patient Sign-up</h1>
+                        
+                         <form method="POST">
+                         {% csrf_token %}
+                        <div class="form-group">
+                            {{user_form.username.label}}
+                            {{user_form.username}}
+                        </div>
+
+                        <div class="form-group">
+                            {{user_form.email.label}}
+                            {{user_form.email}}
+                        </div>
+
+                        <div class="form-group">
+                            {{user_form.password.label}}
+                            {{user_form.password}}
+                        </div>
+                        
+                        <div class="form-group">
+                            {{patient_form.Patient_First_Name.label}}
+                            {{patient_form.Patient_First_Name}}
+                        </div>
+
+                        <div class="form-group">
+                            {{patient_form.Patient_Last_Name.label}}
+                            {{patient_form.Patient_Last_Name}}
+                        </div>
+
+                        <div class="form-group">
+                            {{patient_form.gender.label}}
+                            {{patient_form.gender}}
+                        </div>
+
+                        <div class="form-group">
+                            {{patient_form.contact.label}}
+                            {{patient_form.contact}}
+                        </div>
+
+                        <div class="form-group">
+                            {{patient_form.address.label}}
+                            {{patient_form.address}}
+                        </div>
+                        <h4>
+                            <span style="font-size: 14px;">Already a User? <a href="{% url 'patientlogin' %}" class="btn btn-success btn-sm">Login Here</a></span>
+                        </h4><br>
+                        <input type="submit" class="btn-primary" value="Sign Up">
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+       </div>
+    </body>   
+    <style> 
+                body  
+                {  
+                    background-image:url("https://i.pinimg.com/originals/c5/16/ff/c516ff9163fefeaa5974fc7c8855cd02.jpg"); 
+                    background-repeat: no-repeat; 
+                    
+                    background-size: cover;
+                    position: relative;
+                } 
+
+                /* Add this to signupform.css or your preferred style file */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Add more styles as needed */
+
+            
+    </style>  
+</html>
+            

@@ -1,0 +1,502 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shop &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="gettemplates.co" />
+
+
+
+    
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+    <!-- table -->
+   
+
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			background-color: #f8f9fa;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+	
+		th, td {
+			padding: 15px;
+			text-align: left;
+		}
+	
+		th {
+			background-color: #343a40;
+			color: #ffffff;
+			font-weight: bold;
+		}
+	
+		tbody tr {
+			border-bottom: 1px solid #dee2e6;
+		}
+	
+		tbody tr:hover {
+			background-color: #e8e8e8;
+		}
+	
+		.btn-send-details {
+			background-color: #ffc107;
+			color: #212529;
+			border: 1px solid #ffc107;
+			border-radius: 5px;
+			padding: 10px 16px;
+			text-decoration: none;
+			display: inline-block;
+		}
+	
+		.img-thumbnail {
+			max-width: 100px;
+			max-height: 100px;
+			border-radius: 5px;
+		}
+	
+		.fh5co-nav {
+  	padding: 18px 0;
+    background: linear-gradient(to left,  #b3e3e9,#f5f3f4);
+	}
+
+	.fh5co-nav #fh5co-logo {
+  font-size: 20px;
+  color:white;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.fh5co-nav ul li a {
+  font-size: 20px;
+  font-weight:bold;
+  padding: 30px 10px;
+  text-transform: uppercase;
+  color: rgba(20, 20, 20, 0.932);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
+  color: rgb(16, 206, 16);
+}
+
+
+.fh5co-nav ul li.has-dropdown .dropdown {
+  width: 150px;
+  -webkit-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  z-index: 1002;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  text-align: left;
+  background: #000000;
+  padding: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+
+
+.fh5co-nav ul li.has-dropdown .dropdown:before {
+  bottom: 100%;
+  left: 40px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #d7e7db;
+  border-width: 10px;
+  margin-left: -20px;
+}
+.fh5co-nav ul li.has-dropdown .dropdown li {
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+
+.fh5co-nav ul li.has-dropdown:hover a, .fh5co-nav ul li.has-dropdown:focus a {
+  color: #10b810;
+}
+.fh5co-nav ul li.active > a {
+  color: #d31b1b !important;
+}
+.fh5co-nav ul li .form-group {
+  border: 1px solid red;
+  width: 100%;
+}
+
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
+  background: rgba(234, 237, 238, 0.9);
+  padding: 40px;
+}
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .desc .price {
+  font-size: 14px;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about-content .desc {
+  margin-bottom: 3em;
+}
+
+.feature-center .desc {
+  padding-left: 180px;
+}
+
+.product .desc h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.product .desc h3 a {
+    font-size: 20px;
+  color: #111010;
+}
+.product .desc .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111010;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#fh5co-footer {
+        background: linear-gradient(to left,  #b3e3e9,#f5f3f4);
+    }
+
+
+	</style>
+
+	</head>
+    
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-2">
+                        <div id="fh5co-logo"><a href="">Easy Exchange</a></div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 text-center menu-1">
+                        <ul>
+                            <!-- <li class="has-dropdown">
+                                <a href="product.html">Add Your Product</a>
+                                <ul class="dropdown">
+                                    <li><a href="single.html">Your Products({{noofproducts}})</a></li>
+                                </ul>
+                            </li> -->
+                            <li><a href="add_your_product">Add Your Product</a></li>
+                            <li><a href="seller_page">Products({{noofproducts}})</a></li>
+                            <li><a href="alerts">Likes({{nooflikes}})</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
+                        <ul>
+							<!-- <li class="search">
+								<div class="input-group">
+								  <input type="text" placeholder="Search..">
+								  <span class="input-group-btn">
+	
+								  </span>
+								</div>
+							</li> -->
+							<li class="has-dropdown">
+								<a href="">{{user.username}}</a>
+								<ul class="dropdown">
+									<li><a href="edit">Settings</a></li>
+									<li><a href="{% url 'logout_user' %}">Logout</a></li>
+								</ul>
+							</li>
+							<!-- <li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li> -->
+						</ul>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+
+        
+		<div class="container">
+			<div class="row">
+				<!-- <div class="col-3 border rounded">
+					<h1 class="alert alert-primary" >Register Details</h1>
+					<form action="add" method="post">
+						{% csrf_token %} {{form.as_p}}
+						<button type="sumbit" class="btn btn-success"> register</button>
+					</form>
+	
+				</div> -->
+				<div class="col-9">
+					
+					<div class="alert alert-info text-center" role="alert" style="display: inline-block; background-color: #fff; color: #3498db; border: 1px solid #3498db; border-radius: 8px; padding: 20px;">
+						<h1 style="font-size: 2.5em; margin: 0; color: #3498db;">Interested Buyers <span style="color: #27ae60;">({{ noofintrest }})</span></h1>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">Product</th>
+								<th style="width: 20%;">Buyer Name</th>
+								<th style="width: 20%;">Buyer City</th>
+								<th style="width: 40%;">Messages</th>
+								<th style="width: 40%;">Send Details</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							{% for message in intrestedbuyers %}
+							<tr>
+								<td>
+									<!-- Add your image source here -->
+									<img src="/media/{{message.seller_product.product_image1}}" alt="Image" class="img-thumbnail">
+									<h4 style="color: #343a40; font-weight: bold;">{{ message.seller_product.Product_Name }}</h4>
+								</td>
+								<td>{{ message.buyer }}</td>
+								<td>{{ message.buyer.city }}</td>
+								<td>{{ message }}</td>
+								<td>
+									<a href="{% url 'send_details' message.id %}" class="btn btn-send-details">Send Details</a>
+								</td>
+								
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					
+					<!-- <table class="table table-primary">
+						<thead>
+							<tr>
+								<th><h2>Messages</h2></th>
+								
+								<th><h2>Send Details </h2></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								{% for message in intrestedbuyers %}
+								<td><h4>{{message}}</h4></td>
+								<td>
+									<a href="{% url 'send_details' message.id %}" class="btn btn-warning">Send Details</a>
+								</td>
+	
+							</tr>
+							{% endfor %}
+	
+						</tbody>
+						
+					</table> -->
+				</div>
+	
+			</div>
+		</div>
+       
+
+        
+
+        
+		
+	<div class="fh5co-loader"></div>
+	
+	
+    
+
+	<!-- <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Product</h1>
+							<h2>Free html5 templates by <a href="https://themewagon.com/theme_tag/free/" target="_blank">Themewagon</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header> -->
+	
+	<div id="fh5co-product">
+		<!-- <div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<span>Cool Stuff</span>
+					<h2>Products.</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div> -->
+
+
+            
+
+
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>Shop.</h3>
+					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Meetups</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Easy Exchange</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Handbook</a></li>
+						<li><a href="#">Held Desk</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Find Designers</a></li>
+						<li><a href="#">Find Developers</a></li>
+						<li><a href="#">Teams</a></li>
+						<li><a href="#">Advertise</a></li>
+						<li><a href="#">API</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://blog.gessato.com/" target="_blank">Gessato</a> &amp; <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'js/jquery.countTo.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+<!-- table -->
+    
+
+    
+
+	</body>
+</html>
+

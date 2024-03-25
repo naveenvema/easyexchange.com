@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+table {
+			width: 100%;
+			border-collapse: collapse;
+			background-color: #dfebeb;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+	
+		th, td {
+			padding: 15px;
+			text-align: left;
+		}
+	
+		th {
+			background-color: #343a40;
+			color: #ffffff;
+			font-weight: bold;
+		}
+	
+		tbody tr {
+			border-bottom: 1px solid #dee2e6;
+		}
+	
+		tbody tr:hover {
+			background-color: #e8e8e8;
+		}
+	
+		.btn-send-details {
+			background-color: #ffc107;
+			color: #212529;
+			border: 1px solid #ffc107;
+			border-radius: 5px;
+			padding: 10px 16px;
+			text-decoration: none;
+			display: inline-block;
+		}
+    .btn-send-status {
+			background-color: #7abdd8;
+			color: #212529;
+			border: 1px solid #30cc4a;
+			border-radius: 5px;
+			padding: 10px 16px;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+
+    .btn-send-status-input {
+			background-color: #cdee13;
+			color: #212529;
+			border: 1px solid #43d7eb;
+			border-radius: 5px;
+			padding: 10px 16px;
+			text-decoration: none;
+			display: inline-block;
+		}
+        .btn-send-naveen {
+			background-color: #1dad3d;
+			color: #212529;
+			border: 1px solid #ffc107;
+			border-radius: 5px;
+			padding: 10px 16px;
+			text-decoration: none;
+			display: inline-block;
+		}
+	
+		.img-thumbnail {
+			max-width: 100px;
+			max-height: 100px;
+			border-radius: 5px;
+		}
+	
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background: linear-gradient(to right,  #b1bec2,#f58abf);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 40px; /* Adjust the width of the logo as needed */
+      margin-right: 10px;
+      filter: brightness(0.8); /* Adjust logo brightness for better contrast */
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 15px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .profile {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .profile:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 15px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .dropdown a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Company Logo">
+      <span>Easy Exchnage</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="admin_dashboard">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="profile">
+      {{user.username}}
+      <div class="dropdown">
+        <a href="logout_user">Logout</a>
+        <a href="admin_edit">Settings</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Your content goes here -->
+  <div class="container">
+    <div class="row">
+        <!-- <div class="col-3 border rounded">
+            <h1 class="alert alert-primary" >Register Details</h1>
+            <form action="add" method="post">
+                {% csrf_token %} {{form.as_p}}
+                <button type="sumbit" class="btn btn-success"> register</button>
+            </form>
+
+        </div> -->
+        <div class="container">
+			<div class="row">
+				<!-- <div class="col-3 border rounded">
+					<h1 class="alert alert-primary" >Register Details</h1>
+					<form action="add" method="post">
+						{% csrf_token %} {{form.as_p}}
+						<button type="sumbit" class="btn btn-success"> register</button>
+					</form>
+	
+				</div> -->
+				<div class="col-9">
+					
+					<div class="alert alert-info text-center" role="alert" style="display: inline-block; background-color: #fff; color: #3498db; border: 1px solid #3498db; border-radius: 8px; padding: 20px;">
+						<h1 style="font-size: 2.5em; margin: 0; color: #3498db;">All Products <span style="color: #27ae60;">({{ Allproducts }})</span></h1>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">Product</th>
+								<th style="width: 15%;">Seller Name</th>
+								<th style="width: 15%;">Product City</th>
+								<th style="width: 15%;">detailed Photoes</th>
+                <th style="width: 20%;">Created date</th>
+								<th style="width: 15%;">current Status</th>
+                <th style="width: 20%;">Change Status</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							{% for product in products %}
+							<tr>
+								<td>
+									<!-- Add your image source here -->
+									<img src="/media/{{product.product_image1}}" alt="Image" class="img-thumbnail">
+									<h4 style="color: #343a40; font-weight: bold;">{{product.Product_Name}}</h4>
+								</td>
+								<td>{{ product.customer }}</td>
+								<td>{{ product.customer.city }}</td>
+
+                                <td>
+									<a href="{% url 'admin_singleproduct' product.id %}" class="btn btn-send-details">Other Photoes</a>
+								</td>
+								
+								<td>{{ product.created_at }}</td>
+								<td>
+                    <h4 class="btn btn-send-naveen">{{product.status}}</h4>
+									
+								</td>
+                
+                <td>
+                  <form method="POST" action="admin_manage_products">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                      <select id="dropdown" name="dropdown" class="btn  btn-send-status-input">
+                          <option value="Pending" class="btn btn-lg btn-send-status">Pending</option>
+                          <option value="Confirm" class="btn btn-lg btn-send-status">Confirm</option>
+                          
+                      </select>
+                      <input type="submit" value="Submit" class="btn btn-send-naveen">
+                      <input type="hidden" name="order_id" value="{{product.id}}">
+                  </div>
+
+                </form>
+                </td>
+								
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					
+					<!-- <table class="table table-primary">
+						<thead>
+							<tr>
+								<th><h2>Messages</h2></th>
+								
+								<th><h2>Send Details </h2></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								{% for message in intrestedbuyers %}
+								<td><h4>{{message}}</h4></td>
+								<td>
+									<a href="{% url 'send_details' message.id %}" class="btn btn-warning">Send Details</a>
+								</td>
+	
+							</tr>
+							{% endfor %}
+	
+						</tbody>
+						
+					</table> -->
+				</div>
+	
+			</div>
+		</div>
+       
+
+    </div>
+</div>
+
+
+  
+
+</body>
+</html>

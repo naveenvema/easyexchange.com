@@ -1,0 +1,533 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<!-- <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shop &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="gettemplates.co" /> -->
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="{% static 'css/main-bootstrap.min.css' %}">
+
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+
+
+
+.custom-card {
+      border-color: #4447441f;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      box-shadow: 6px 6px;
+    }
+
+
+
+    .custom-card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 2rem;
+      font-weight: bold;
+      
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      color: #ced123;
+      margin-bottom: 1rem;
+    }
+
+    .text-muted {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #6c757d;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #495057;
+    }
+		
+		#fh5co-footer {
+        background: linear-gradient(to left,  #b3e3e9,#f5f3f4);
+    }
+
+        .status {
+            font-weight: bold;
+            background-color: rgb(222, 217, 32); /* Choose the desired highlight color */
+            display: inline-block; /* Ensures the background color spans the width of the text */
+            padding: 10px; /* Adjust padding as needed */
+        }
+		
+    	.bold-link {
+        font-weight: bold;
+		 
+    }
+	.fh5co-nav {
+  	padding: 18px 0;
+  	background: #f0f5c4;
+	}
+
+	body {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #828282;
+  background: #86abc43f;
+}
+
+.fh5co-nav {
+  	padding: 18px 0;
+    background: linear-gradient(to left,  #b3e3e9,#f5f3f4);
+	}
+
+	.fh5co-nav #fh5co-logo {
+  font-size: 20px;
+  color:white;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.fh5co-nav ul li a {
+  font-size: 20px;
+  font-weight:bold;
+  padding: 30px 10px;
+  text-transform: uppercase;
+  color: rgba(20, 20, 20, 0.932);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
+  color: rgb(16, 206, 16);
+}
+
+
+.fh5co-nav ul li.has-dropdown .dropdown {
+  width: 150px;
+  -webkit-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  z-index: 1002;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  text-align: left;
+  background: #000000;
+  padding: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+
+
+.fh5co-nav ul li.has-dropdown .dropdown:before {
+  bottom: 100%;
+  left: 40px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #d7e7db;
+  border-width: 10px;
+  margin-left: -20px;
+}
+.fh5co-nav ul li.has-dropdown .dropdown li {
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+
+.fh5co-nav ul li.has-dropdown:hover a, .fh5co-nav ul li.has-dropdown:focus a {
+  color: #10b810;
+}
+.fh5co-nav ul li.active > a {
+  color: #d31b1b !important;
+}
+.fh5co-nav ul li .form-group {
+  border: 1px solid red;
+  width: 100%;
+}
+
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
+  background: rgba(234, 237, 238, 0.9);
+  padding: 40px;
+}
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .desc .price {
+  font-size: 14px;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about-content .desc {
+  margin-bottom: 3em;
+}
+
+.feature-center .desc {
+  padding-left: 180px;
+}
+
+.product .desc h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.product .desc h3 a {
+    font-size: 20px;
+  color: #111010;
+}
+.product .desc .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111010;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+.heart-symbol {
+    color: green; /* You can set any color you want */
+  }
+
+
+	
+    </style>
+
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-2">
+					<div id="fh5co-logo"><a href="">Easy Exchange</a></div>
+				</div>
+				<div class="col-md-6 col-xs-6 text-center menu-1">
+					<ul>
+						<!-- <li class="has-dropdown">
+							<a href="product.html">Add Your Product</a>
+							<ul class="dropdown">
+								<li><a href="single.html">Your Products({{noofproducts}})</a></li>
+							</ul>
+						</li> -->
+						<li class="bold-link"><a href="splitpage">Home</a></li>
+						<li class="bold-link"><a href="add_your_product">Add Product</a></li>
+						<!-- <li class="bold-link"><a href="seller_page">Products({{noofproducts}})</a></li> -->
+						
+						<li class="bold-link"><a href="intrested_buyers">Intrested Buyers({{noofintrest}})</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
+					<ul>
+						<!-- <li class="search">
+							<div class="input-group">
+						      <input type="text" placeholder="Search..">
+						      <span class="input-group-btn">
+
+						      </span>
+						    </div>
+						</li> -->
+						<li style="color: rgb(28, 224, 77) !important;"><a href="alerts"><span>&#10084;&#65039;</span>({{noofnotification}})</a></li>
+						<li class="has-dropdown">
+							<a href="">{{user.username}}</a>
+							<ul class="dropdown">
+								<li><a href="edit">Settings</a></li>
+								<li><a href="{% url 'logout_user' %}">Logout</a></li>
+							</ul>
+						</li>
+						<!-- <li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li> -->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<!-- <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Product</h1>
+							<h2>Free html5 templates by <a href="https://themewagon.com/theme_tag/free/" target="_blank">Themewagon</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header> -->
+	
+	<div id="fh5co-product">
+		<!-- <div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<span>Cool Stuff</span>
+					<h2>Products.</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div> -->
+			<div class="row">
+                {% for product in sellerproducts %}
+
+                <div class="col-md-3 text-center animate-box  my-5">
+                    <div class="card custom-card" style="width: 30rem;">
+                      <img src="/media/{{product.product_image1}}" class="card-img-top" alt="Product Image">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'go_to_details' product.id %}" style="text-decoration: none; color: #343a40;">{{product.Product_Name}}</a></h5>
+                        <p class="card-text"></p>
+                        <p class="card-text text-muted" >Rs.{{product.price}}/-</p>
+
+                        <h4><span class="btn btn-success btn-lg font-weight:bold font-size:100px">{{ product.status }}</span></h4>
+
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter{{ product.id }}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+
+                        
+                        <!-- <a href="{% url 'go_to_details' product.id %}" class="btn btn-success btn-lg font-weight: bold;">Delete</a> -->
+                      </div>
+                    </div>
+                  </div>
+
+
+                <!-- <div class="col-md-4 text-center animate-box">
+                    <div class="product">
+                        <div class="product-grid" style="background-image:url('{{product.product_image1.url }}')">
+                            <div class="inner">
+                                <p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{ product.id }}">
+                                        <i class="fas fa-trash text-secondary"></i>
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <h3><a href="seller_page">{{ product.Product_Name }}</a></h3>
+                            <span class=" btn btn-success">Rs.{{ product.price }}/-</span><br>
+                            <h3><span class="status">{{ product.status }}</span></h3>
+                        </div>
+                    </div>
+                </div> -->
+            
+                <!-- Modal for each product -->
+                <div class="modal fade" id="exampleModalCenter{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Delete</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- You can customize the modal content here for each product -->
+                                
+                                <p>Product Name: {{ product.Product_Name }}</p>
+                                <p>Product Price: {{ product.price }}</p>
+                                <!-- Add more details as needed -->
+                            </div>
+                            <div class="modal-footer">
+                                <!-- Add your delete buttons or other actions here -->
+                                <a href="{% url 'delete_sellerproducts' product.id %}" class="btn btn-danger">Failed to Sell</a>
+                                <a href="{% url 'selling_successfullly' product.id %}" class="btn btn-success">Selling Successfully</a>
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+      </div>
+
+	
+	  
+	  <!-- Modal -->
+	  
+
+	
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>Easy Exchange</h3>
+					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Meetups</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Shop</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Handbook</a></li>
+						<li><a href="#">Held Desk</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Find Designers</a></li>
+						<li><a href="#">Find Developers</a></li>
+						<li><a href="#">Teams</a></li>
+						<li><a href="#">Advertise</a></li>
+						<li><a href="#">API</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://blog.gessato.com/" target="_blank">Gessato</a> &amp; <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'js/jquery.countTo.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	</body>
+</html>
+
